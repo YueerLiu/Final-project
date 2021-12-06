@@ -11,7 +11,7 @@ st.markdown("[Dataset](https://www.kaggle.com/attilakiss/secondhand-car-market-d
 st.write("The dataset originates from the biggest used car advertisement site of Hungary. It concludes every car's ID of advertisement, ID of region, Price of advertisement, Number of pictures ha benn uploaded to the advertisement, the type of proseller, the date of production, the brand and model, and so on.")
 st.write("In this project, I will analyze the data from two perspectives: seller and buyer.")
 st.write("The following is the whole data.")
-df = pd.read_csv("C://Users//liuyu//Desktop//advertisements.csv",na_values=" ")
+df = pd.read_csv("advertisements.csv",na_values=" ")
 df
 
 st.write("You can download the data by click the button.")
@@ -59,7 +59,7 @@ st.write("As it turns out, there was no clear correlation between whether the AD
 st.subheader("Will the brand of the car affect the price of advertising?")
 st.write("Sellers can choose to see the average advertising price for the brand they want to know.")
 st.write("The following is the number of each brand.")
-dfbrand = pd.read_csv("C://Users//liuyu//Desktop//brand.csv")
+dfbrand = pd.read_csv("brand.csv")
 dfbrand
 numberbrand=st.number_input("Please input the number corresponding to the brand ", min_value=1, max_value=102)
 mean=df[df["brand_id"]==numberbrand]["ad_price"].mean()
